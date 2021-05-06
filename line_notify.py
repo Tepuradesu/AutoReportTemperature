@@ -1,7 +1,7 @@
 import requests
 
 #変数定義
-token='K3FaMwAR400CwqfOrHN3UJG9ysG0PAT3RJMVdn7ri53'
+token=''
 
 class LineNotify:
  API_URL = "https://notify-api.line.me/api/notify"
