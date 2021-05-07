@@ -27,9 +27,3 @@ class LineNotify:
          data = payload,
          files=files,
          )
-
-#bot = LineNotify(access_token=token)
-#bot.send(
-#    message='Your Message',
-#    ) 
-
