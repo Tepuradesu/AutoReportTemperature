@@ -10,9 +10,9 @@ chrome_path = '/usr/bin/chromium-browser'
 chromedriver_path = '/usr/lib/chromium/chromedriver'
 sekomu_login_url = 'http://www.e-kakushin.com/eanpi/simlogin.do?'
 renraku_hokoku_url='https://www0.e-kakushin.com/eanpi/contact/UsrVnRegistSafety.do'
-kigyo_code = ''
-user_id = ''
-password = ''
+kigyo_code = '861'
+user_id = '219219'
+password = 'Kojiro1923'
 token=''
 #開発環境:True 本番環境:False
 dev_or_pro = True
@@ -69,11 +69,12 @@ print('------Complete Page Transition!--------')
 d.get(renraku_hokoku_url)
 time.sleep(3)
 try: 
- saigaijokyo_label_elm=d.find_element_by_xpath("//*[@id=\"saigaiJykyKndCd001\"]/parent::label")
+ saigaijokyo_checkbox_elm=d.find_element_by_xpath("//*[@id=\"saigaiJykyKndCd001\"]")
+ saigaijokyo_paneltext_elm=d.find_element_by_xpath("//*[@id=\"l-main\"]/div/div[1]/div[2]/table[2]/tbody/tr[1]/td/div/div[1]/label/span/span[2]")
  #checkbox 選択状態を確認。未選択の場合のみチェックする。
- if not saigaijokyo_label_elm.is_selected():
+ if not saigaijokyo_checkbox_elm.is_selected():
    print("検温項目がチェックされていません。\n新しく検温項目をチェックします。")
-   saigaijokyo_label_elm.click()
+   saigaijokyo_paneltext_elm.click()
  else:
   print("既に37.0未満をチェック済みです。")
   
