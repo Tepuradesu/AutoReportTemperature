@@ -8,11 +8,11 @@ from line_notify import LineNotify
 #変数定義
 chrome_path = '/usr/bin/chromium-browser'
 chromedriver_path = '/usr/lib/chromium/chromedriver'
-sekomu_login_url = 'http://www.e-kakushin.com/eanpi/simlogin.do?'
-renraku_hokoku_url='https://www0.e-kakushin.com/eanpi/contact/UsrVnRegistSafety.do'
-kigyo_code = '861'
-user_id = '219219'
-password = 'Kojiro1923'
+sekomu_login_url = ''
+renraku_hokoku_url=''
+kigyo_code = 'Your kigyo code'
+user_id = 'Your id'
+password = 'Your password'
 token=''
 #開発環境:True 本番環境:False
 dev_or_pro = True
